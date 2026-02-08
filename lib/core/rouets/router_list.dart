@@ -1,0 +1,99 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+import 'package:gym_app/features/admin/ui/views/admin_view.dart';
+import 'package:gym_app/features/auth/manager/onboarding_cubit.dart';
+import 'package:gym_app/features/auth/ui/views/sign_up_view.dart';
+import 'package:gym_app/features/coach/chat/manager/messages_cubit.dart';
+import 'package:gym_app/features/coach/home/manager/coach_cubit.dart';
+import 'package:gym_app/features/coach/home/ui/widgets/coach_bottom_nav_bar_view_body.dart';
+import 'package:gym_app/features/coach/home/ui/widgets/member_profile_screen.dart';
+import 'package:gym_app/features/member/home/manager/member_cubit.dart';
+import 'package:gym_app/features/member/home/ui/widgets/choose_coach_screen.dart';
+import 'package:gym_app/features/member/profile/ui/widgets/profile_tab.dart';
+
+import '../../features/auth/ui/views/login_view.dart';
+import '../../features/auth/ui/views/survey_view.dart';
+import '../../features/coach/home/ui/views/coach_bottom_nav_bar_view.dart';
+import '../../features/member/data/models/member_model.dart';
+import '../../features/member/home/ui/views/bottom_nav_bar_view.dart';
+import '../../features/member/shop/ui/views/cart_view.dart';
+
+class RoutesList {
+  static final List<RouteBase> all = [
+    //toDo auth-----------------------------------------------------
+    GoRoute(
+      path: LoginView.routeName,
+      builder: (context, state) => const LoginView(),
+    ),
+
+    GoRoute(
+      path: SignUpView.routeName,
+      builder: (context, state) => const SignUpView(),
+    ),
+
+    GoRoute(
+      path: OnboardingView.routeName,
+
+      builder: (context, state) => BlocProvider(
+        create: (_) => OnboardingCubit(),
+        child: OnboardingView(),
+      ),
+    ),
+
+    //todo home ---------------------------------------------
+    GoRoute(
+      path: BottomNavBarView.routeName,
+      builder: (context, state) => const BottomNavBarView(),
+    ),
+
+    GoRoute(
+      path: ProfileScreen.routeName,
+      builder: (context, state) => const ProfileScreen(),
+    ),
+    GoRoute(
+      path: ChooseCoachScreen.routeName,
+
+      builder: (context, state) => BlocProvider(
+        create: (_) => MemberCubit()..loadCoaches(),
+        child: ChooseCoachScreen(),
+      ),
+    ),
+    //todo cart -----------------------------------------------------
+    GoRoute(
+      path: CartView.routeName,
+      builder: (context, state) => const CartView(),
+    ),
+    // todo coach ---------------------------------------------------
+    GoRoute(
+      path: CoachBottomNavBarView.routeName,
+
+      builder: (context, state) => MultiBlocProvider(
+        providers: [
+          BlocProvider(create: (_) => MessagesCubit()),
+          BlocProvider(create: (_) => CoachCubit()..getCoachSessions('1')),
+        ],
+
+        child: CoachBottomNavBarView(),
+      ),
+    ),
+
+    GoRoute(
+      path: MemberProfileScreen.routeName,
+
+      builder: (context, state) {
+        final member = state.extra as MemberModel;
+
+        return BlocProvider(
+
+        create: (_) => CoachCubit()..getCoachSessions('1'),
+          child: MemberProfileScreen(member: member,),
+        );
+      },
+    ),
+
+    GoRoute(
+      path: AdminView.routeName,
+      builder: (context, state) => const AdminView(),
+    ),
+  ];
+}
