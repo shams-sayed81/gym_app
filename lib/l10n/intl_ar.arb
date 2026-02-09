@@ -244,11 +244,14 @@
   "training": "التدريب",
   "inbody": "إنبودي",
   "messages": "الرسائل",
-  "member_profile": "الملف الشخصي للعضو"
-
-
-
-
-
-
+  "member_profile": "الملف الشخصي للعضو",
+  "custom_plan": "خطة مخصصة",
+  "target_custom": "الهدف: مخصص",
+  "generating_your_plan": "جارٍ إنشاء خطتك",
+  "analyzing_your_metrics": "جارٍ تحليل بياناتك",
+  "create_your_plan": "أنشئ خطتك",
+  "step_1_basics": "الخطوة 1: الأساسيات",
+  "training_days_per_week": "أيام التدريب في الأسبوع",
+  "save_plan": "حفظ الخطة",
+  "coach_designed_new_plan": "قام مدربك بتصميم خطة التمرين الجديدة الخاصة بك."
 }

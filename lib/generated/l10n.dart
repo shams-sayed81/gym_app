@@ -1948,6 +1948,86 @@ class S {
       args: [],
     );
   }
+
+  /// `Create Your Plan`
+  String get create_your_plan {
+    return Intl.message(
+      'Create Your Plan',
+      name: 'create_your_plan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Step 1: Basics`
+  String get step_1_basics {
+    return Intl.message(
+      'Step 1: Basics',
+      name: 'step_1_basics',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Training Days per Week`
+  String get training_days_per_week {
+    return Intl.message(
+      'Training Days per Week',
+      name: 'training_days_per_week',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Generating your plan`
+  String get generating_your_plan {
+    return Intl.message(
+      'Generating your plan',
+      name: 'generating_your_plan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Analyzing your metrics`
+  String get analyzing_your_metrics {
+    return Intl.message(
+      'Analyzing your metrics',
+      name: 'analyzing_your_metrics',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save Plan`
+  String get save_plan {
+    return Intl.message('Save Plan', name: 'save_plan', desc: '', args: []);
+  }
+
+  /// `Custom Plan`
+  String get custom_plan {
+    return Intl.message('Custom Plan', name: 'custom_plan', desc: '', args: []);
+  }
+
+  /// `Target: Custom`
+  String get target_custom {
+    return Intl.message(
+      'Target: Custom',
+      name: 'target_custom',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your coach has designed your new workout plan.`
+  String get coach_designed_new_plan {
+    return Intl.message(
+      'Your coach has designed your new workout plan.',
+      name: 'coach_designed_new_plan',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

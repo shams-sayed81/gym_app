@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gym_app/core/enums/login.dart';
+
 import 'package:gym_app/core/helpers/app_decoration.dart';
 import 'package:gym_app/core/helpers/spacing.dart';
 import 'package:gym_app/core/theme/app_colors.dart';
@@ -17,7 +19,7 @@ class LoginViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     final s = S.of(context);
     return DefaultTabController(
-      length: 2,
+      length: 3,
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -34,7 +36,10 @@ class LoginViewBody extends StatelessWidget {
                 ),
                 child: SvgPicture.asset(
                   'assets/images/dumbbell.svg',
-                  colorFilter: ColorFilter.mode(AppColors.white, BlendMode.srcIn),
+                  colorFilter: ColorFilter.mode(
+                    AppColors.white,
+                    BlendMode.srcIn,
+                  ),
                   width: 50,
                 ),
               ),
@@ -54,21 +59,29 @@ class LoginViewBody extends StatelessWidget {
                   vGap(5),
                   Text(s.select_role, style: AppTextStyles.font14GreyRegular),
                   vGap(10),
-                  CustomTabBar(tabs: [_buildTab(text: s.member, icon: Icons.person_outline),
-                    _buildTab(text: s.coach, icon: Icons.sports_gymnastics),],),
+                  CustomTabBar(
+                    tabs: [
+                      _buildTab(text: s.member, icon: Icons.person_outline),
+                      _buildTab(text: s.coach, icon: Icons.sports_gymnastics),
+                      _buildTab(text: s.admin, icon: Icons.admin_panel_settings),
+
+                    ],
+                  ),
+
                   vGap(10),
 
                   SizedBox(
-                    height:MediaQuery.of(context).size.height*0.35,
+                    height: MediaQuery.of(context).size.height * 0.35,
                     child: TabBarView(
                       children: [
-                        MemberTabBarView(),
-                        MemberTabBarView(isCoach: true,),
+
+                        MemberTabBarView(role: LoginRole.member),
+                        MemberTabBarView(role: LoginRole.coach),
+                        MemberTabBarView(role: LoginRole.admin),
+
                       ],
                     ),
                   ),
-
-
                 ],
               ),
             ),
@@ -87,5 +100,4 @@ class LoginViewBody extends StatelessWidget {
       ),
     );
   }
-
 }

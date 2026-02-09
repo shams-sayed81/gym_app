@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gym_app/core/enums/login.dart';
 import 'package:gym_app/core/helpers/app_decoration.dart';
 import 'package:gym_app/core/helpers/spacing.dart';
 import 'package:gym_app/core/theme/app_colors.dart';
@@ -65,9 +66,12 @@ class SignUpViewBody extends StatelessWidget {
                     height: MediaQuery.of(context).size.height * 0.45,
                     child: TabBarView(
                       children: [
-                        MemberTabBarView(isSignUp: true,),
-                        MemberTabBarView(isCoach: true, isSignUp: true,),
+
+                        MemberTabBarView(role: LoginRole.member, isSignUp: true,),
+                        MemberTabBarView(role: LoginRole.coach, isSignUp: true),
+                        MemberTabBarView(role: LoginRole.admin, isSignUp: true),
                       ],
+
                     ),
                   ),
                 ],

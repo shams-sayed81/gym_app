@@ -255,7 +255,19 @@
   "training": "Training",
   "inbody": "InBody",
   "messages": "Messages",
-  "member_profile": "Member Profile"
+  "member_profile": "Member Profile",
+  "create_your_plan": "Create Your Plan",
+  "step_1_basics": "Step 1: Basics",
+  "training_days_per_week": "Training Days per Week",
+  "generating_your_plan": "Generating your plan",
+  "analyzing_your_metrics": "Analyzing your metrics",
+  "save_plan": "Save Plan",
+  "custom_plan": "Custom Plan",
+  "target_custom": "Target: Custom",
+  "coach_designed_new_plan": "Your coach has designed your new workout plan."
+
+
+
 
 
 

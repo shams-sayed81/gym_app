@@ -78,6 +78,8 @@ class _HomeTabState extends State<HomeTab> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               AppBar(
+                automaticallyImplyLeading: false,
+                titleSpacing: -15,
                 toolbarHeight: 100,
                 backgroundColor: AppColors.primary,
                 title: ListTile(
@@ -108,7 +110,7 @@ class _HomeTabState extends State<HomeTab> {
                   Text(s.todays_workout,
                       style: AppTextStyles.font16WhiteBold),
                   TextButton(
-                    onPressed: () => showPlanDialog(context),
+                    onPressed: () => showWeekDialog(context),
                     child: Text(
                       s.view_plan,
                       style: AppTextStyles.font16WhiteBold.copyWith(

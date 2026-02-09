@@ -9,6 +9,7 @@ import 'package:gym_app/core/theme/app_text_styles.dart';
 import 'package:gym_app/core/widgets/custom_button.dart';
 import 'package:gym_app/features/member/home/manager/member_cubit.dart';
 import 'package:gym_app/features/member/home/manager/member_state.dart';
+import 'package:gym_app/features/member/home/ui/widgets/request_sent_screen.dart';
 
 import '../../../../../generated/l10n.dart';
 
@@ -177,7 +178,7 @@ class ChooseCoachScreen extends StatelessWidget {
                                         children: [
                                           Expanded(child: CustomButton(text: s.cancel, onPressed: () => context.pop(),color:AppColors.grey ,)),
                                           hGap(5),
-                                          Expanded(child: CustomButton(text: s.confirm_and_pay, onPressed: () {},)),
+                                          Expanded(child: CustomButton(text: s.confirm_and_pay, onPressed: ()=> context.pushReplacement(RequestSentScreen.routeName),)),
                                         ],
                                       )
                                     ],

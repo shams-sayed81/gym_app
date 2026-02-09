@@ -1,11 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-
 import '../../../../../core/theme/app_colors.dart';
-
-
 import '../../../ai/ai_tab.dart';
 import '../../../eat/widgets/eat_tap.dart';
 import '../../../shop/ui/widgets/market_tab.dart';
@@ -13,9 +9,7 @@ import '../../../train/widgets/train_tap.dart';
 import '../../manager/bottom_nav_bar_cubit.dart';
 import '../widgets/bottom_nav_bar_view_body.dart';
 import '../widgets/home_tab.dart';
-
-
-
+import '../widgets/week_summary_screen.dart';
 
 class BottomNavBarView extends StatefulWidget {
   const BottomNavBarView({super.key});
@@ -26,11 +20,36 @@ class BottomNavBarView extends StatefulWidget {
 }
 
 class BottomNavBarViewState extends State<BottomNavBarView> {
+  List<Map<String, dynamic>>? weekPlan;
+
+  @override
+  void initState() {
+    super.initState();
+
+
+    weekPlan = [
+      {'type': 'Chest', 'selectedExercises': ['Bench Press', 'Incline Press']},
+      {'type': 'Back', 'selectedExercises': ['Pull Up', 'Deadlift']},
+    ];
+  }
+
   @override
   Widget build(BuildContext context) {
+    final trainWidget = (weekPlan != null &&
+        weekPlan!.any((day) => (day['selectedExercises'] as List).isNotEmpty))
+        ? WeekSummaryScreen(
+      weekPlan: weekPlan!,
+      onReset: () {
+        setState(() {
+          weekPlan = null;
+        });
+      },
+    )
+        : TrainTab();
+
     List<Widget> homeBodies = [
       HomeTab(),
-      TrainTab(),
+      trainWidget,
       AiTab(),
       EatTab(),
       MarketTab(),
@@ -40,9 +59,8 @@ class BottomNavBarViewState extends State<BottomNavBarView> {
       create: (_) => BottomNavBarCubit(),
       child: SafeArea(
         child: GestureDetector(
-          onTap: () =>FocusScope.of(context).unfocus(),
+          onTap: () => FocusScope.of(context).unfocus(),
           child: Scaffold(
-
             backgroundColor: AppColors.primary,
             extendBody: false,
             body: BlocBuilder<BottomNavBarCubit, BottomNavBarState>(

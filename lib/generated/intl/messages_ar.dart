@@ -44,6 +44,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "analysis_projection": MessageLookupByLibrary.simpleMessage(
       "التحليل والتوقعات",
     ),
+    "analyzing_your_metrics": MessageLookupByLibrary.simpleMessage(
+      "جارٍ تحليل بياناتك",
+    ),
     "app_name": MessageLookupByLibrary.simpleMessage("IronPulse"),
     "app_tagline": MessageLookupByLibrary.simpleMessage(
       "نظامك المتكامل للياقة البدنية",
@@ -101,6 +104,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "coach_assigned_training": MessageLookupByLibrary.simpleMessage(
       "المدرب المخصص (التدريب)",
     ),
+    "coach_designed_new_plan": MessageLookupByLibrary.simpleMessage(
+      "قام مدربك بتصميم خطة التمرين الجديدة الخاصة بك.",
+    ),
     "coach_designed_plan": MessageLookupByLibrary.simpleMessage(
       "قام مدربك بتصميم خطة التمرين الجديدة الخاصة بك.",
     ),
@@ -118,6 +124,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "create_workout_plan": MessageLookupByLibrary.simpleMessage(
       "إنشاء خطة تمرين",
     ),
+    "create_your_plan": MessageLookupByLibrary.simpleMessage("أنشئ خطتك"),
+    "custom_plan": MessageLookupByLibrary.simpleMessage("خطة مخصصة"),
     "custom_workouts_and_nutrition": MessageLookupByLibrary.simpleMessage(
       "تمارين وخطة تغذية مخصصة",
     ),
@@ -163,6 +171,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "قم بإنشاء خطة تغذية باستخدام المدرب الذكي للاطلاع على وجباتك اليومية.",
     ),
     "generate_plan": MessageLookupByLibrary.simpleMessage("إنشاء الخطة"),
+    "generating_your_plan": MessageLookupByLibrary.simpleMessage(
+      "جارٍ إنشاء خطتك",
+    ),
     "goal": MessageLookupByLibrary.simpleMessage("الهدف:"),
     "hello_ai_coach": MessageLookupByLibrary.simpleMessage(
       "مرحباً! أنا مدربك الذكي. أستطيع مساعدتك في تخصيص تدريبك، إعداد خطط وجبات، أو تعديل أهدافك. ماذا تريد أن تفعل اليوم؟",
@@ -298,6 +309,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "راجع التفاصيل قبل القبول.",
     ),
     "save_changes": MessageLookupByLibrary.simpleMessage("حفظ التغييرات"),
+    "save_plan": MessageLookupByLibrary.simpleMessage("حفظ الخطة"),
     "schedule": MessageLookupByLibrary.simpleMessage("الجدول"),
     "schedule_and_training": MessageLookupByLibrary.simpleMessage(
       "الجدول والتدريب",
@@ -336,6 +348,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "start_shopping": MessageLookupByLibrary.simpleMessage("ابدأ التسوق"),
     "start_workout": MessageLookupByLibrary.simpleMessage("ابدأ التمرين"),
     "step": MessageLookupByLibrary.simpleMessage("خطوة"),
+    "step_1_basics": MessageLookupByLibrary.simpleMessage(
+      "الخطوة 1: الأساسيات",
+    ),
     "strength": MessageLookupByLibrary.simpleMessage("القوة"),
     "strong": MessageLookupByLibrary.simpleMessage("قوي"),
     "supplements": MessageLookupByLibrary.simpleMessage("مكملات غذائية"),
@@ -345,6 +360,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "target_body_shape": MessageLookupByLibrary.simpleMessage(
       "شكل الجسم المستهدف",
     ),
+    "target_custom": MessageLookupByLibrary.simpleMessage("الهدف: مخصص"),
     "target_goal": MessageLookupByLibrary.simpleMessage("الهدف"),
     "time": MessageLookupByLibrary.simpleMessage("الوقت"),
     "todays_sessions": MessageLookupByLibrary.simpleMessage("جلسات اليوم"),
@@ -355,6 +371,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "train": MessageLookupByLibrary.simpleMessage("تدريب"),
     "training": MessageLookupByLibrary.simpleMessage("التدريب"),
+    "training_days_per_week": MessageLookupByLibrary.simpleMessage(
+      "أيام التدريب في الأسبوع",
+    ),
     "training_frequency": MessageLookupByLibrary.simpleMessage("تكرار التدريب"),
     "training_question": MessageLookupByLibrary.simpleMessage(
       "كم عدد الأيام التي يمكنك التدريب فيها أسبوعيًا؟",

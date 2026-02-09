@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:gym_app/core/helpers/spacing.dart';
 import 'package:gym_app/core/theme/app_colors.dart';
 import 'package:gym_app/core/theme/app_text_styles.dart';
 import 'package:gym_app/core/widgets/custom_button.dart';
+import 'package:gym_app/features/auth/ui/widgets/loading_screen.dart';
 
 import '../../../../generated/l10n.dart';
 import '../../manager/onboarding_cubit.dart';
@@ -82,13 +84,15 @@ class _OnboardingViewState extends State<OnboardingView> {
                       flex: currentStep == 0 ? 1 : 2,
                       child: CustomButton(
                         iconData: Icons.arrow_forward_ios_outlined,
-                        text: currentStep ==3? s.generate_plan :s.continu,
+                        text: currentStep == 3 ? s.generate_plan : s.continu,
                         onPressed: () {
                           if (currentStep < 3) {
                             _controller.nextPage(
                               duration: const Duration(milliseconds: 300),
                               curve: Curves.easeInOut,
                             );
+                          } else {
+                            context.go(LoadingScreen.routeName);
                           }
                         },
                       ),

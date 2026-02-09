@@ -3,13 +3,17 @@ import 'package:go_router/go_router.dart';
 import 'package:gym_app/features/admin/ui/views/admin_view.dart';
 import 'package:gym_app/features/auth/manager/onboarding_cubit.dart';
 import 'package:gym_app/features/auth/ui/views/sign_up_view.dart';
+import 'package:gym_app/features/auth/ui/widgets/loading_screen.dart';
 import 'package:gym_app/features/coach/chat/manager/messages_cubit.dart';
 import 'package:gym_app/features/coach/home/manager/coach_cubit.dart';
 import 'package:gym_app/features/coach/home/ui/widgets/coach_bottom_nav_bar_view_body.dart';
 import 'package:gym_app/features/coach/home/ui/widgets/member_profile_screen.dart';
+import 'package:gym_app/features/member/eat/widgets/plan_ready_screen.dart';
 import 'package:gym_app/features/member/home/manager/member_cubit.dart';
 import 'package:gym_app/features/member/home/ui/widgets/choose_coach_screen.dart';
+import 'package:gym_app/features/member/home/ui/widgets/request_sent_screen.dart';
 import 'package:gym_app/features/member/profile/ui/widgets/profile_tab.dart';
+import 'package:gym_app/features/member/train/widgets/design_manually_screen.dart';
 
 import '../../features/auth/ui/views/login_view.dart';
 import '../../features/auth/ui/views/survey_view.dart';
@@ -94,6 +98,26 @@ class RoutesList {
     GoRoute(
       path: AdminView.routeName,
       builder: (context, state) => const AdminView(),
+    ),
+
+
+    GoRoute(
+      path: LoadingScreen.routeName,
+      builder: (context, state) => const LoadingScreen(),
+    ),
+    GoRoute(
+      path: DesignPlanManuallyScreen.routeName,
+      builder: (context, state) => const DesignPlanManuallyScreen(),
+    ),
+
+    GoRoute(
+      path: RequestSentScreen.routeName,
+      builder: (context, state) => const RequestSentScreen(),
+    ),
+
+    GoRoute(
+      path: PlanReadyScreen.routeName,
+      builder: (context, state) => const PlanReadyScreen(),
     ),
   ];
 }
