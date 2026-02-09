@@ -253,5 +253,10 @@
   "step_1_basics": "الخطوة 1: الأساسيات",
   "training_days_per_week": "أيام التدريب في الأسبوع",
   "save_plan": "حفظ الخطة",
-  "coach_designed_new_plan": "قام مدربك بتصميم خطة التمرين الجديدة الخاصة بك."
+  "coach_designed_new_plan": "قام مدربك بتصميم خطة التمرين الجديدة الخاصة بك.", "nutrition_plan": "خطة التغذية",
+  "daily_targets": "الأهداف اليومية",
+  "next_meals": "الوجبات القادمة",
+  "diet_type": "نوع النظام الغذائي",
+  "save_meal_plan": "حفظ خطة الوجبات",
+  "add_meal": "إضافة وجبة"
 }

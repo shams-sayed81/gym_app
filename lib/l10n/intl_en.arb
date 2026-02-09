@@ -264,7 +264,13 @@
   "save_plan": "Save Plan",
   "custom_plan": "Custom Plan",
   "target_custom": "Target: Custom",
-  "coach_designed_new_plan": "Your coach has designed your new workout plan."
+  "coach_designed_new_plan": "Your coach has designed your new workout plan.",
+  "nutrition_plan": "Nutrition Plan",
+  "daily_targets": "Daily Targets",
+  "next_meals": "Next Meals",
+  "diet_type": "Diet Type",
+  "save_meal_plan": "Save Meal Plan",
+  "add_meal": "Add Meal"
 
 
 

@@ -2028,6 +2028,51 @@ class S {
       args: [],
     );
   }
+
+  /// `Nutrition Plan`
+  String get nutrition_plan {
+    return Intl.message(
+      'Nutrition Plan',
+      name: 'nutrition_plan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Daily Targets`
+  String get daily_targets {
+    return Intl.message(
+      'Daily Targets',
+      name: 'daily_targets',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next Meals`
+  String get next_meals {
+    return Intl.message('Next Meals', name: 'next_meals', desc: '', args: []);
+  }
+
+  /// `Diet Type`
+  String get diet_type {
+    return Intl.message('Diet Type', name: 'diet_type', desc: '', args: []);
+  }
+
+  /// `Save Meal Plan`
+  String get save_meal_plan {
+    return Intl.message(
+      'Save Meal Plan',
+      name: 'save_meal_plan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Meal`
+  String get add_meal {
+    return Intl.message('Add Meal', name: 'add_meal', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "accessories": MessageLookupByLibrary.simpleMessage("Accessories"),
     "account": MessageLookupByLibrary.simpleMessage("Account"),
     "activity": MessageLookupByLibrary.simpleMessage("Activity"),
+    "add_meal": MessageLookupByLibrary.simpleMessage("Add Meal"),
     "add_session": MessageLookupByLibrary.simpleMessage("Add Session"),
     "adjust_my_workout_day": MessageLookupByLibrary.simpleMessage(
       "Adjust my workout day",
@@ -132,6 +133,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Custom Workouts and Nutrition",
     ),
     "daily_calories": MessageLookupByLibrary.simpleMessage("Daily Calories"),
+    "daily_targets": MessageLookupByLibrary.simpleMessage("Daily Targets"),
     "date": MessageLookupByLibrary.simpleMessage("Date"),
     "day": MessageLookupByLibrary.simpleMessage("Day"),
     "days_per_week": MessageLookupByLibrary.simpleMessage("days/week"),
@@ -140,6 +142,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Design a new training program for a member.",
     ),
     "dessert": MessageLookupByLibrary.simpleMessage("Dessert"),
+    "diet_type": MessageLookupByLibrary.simpleMessage("Diet Type"),
     "dinner": MessageLookupByLibrary.simpleMessage("Dinner"),
     "duration": MessageLookupByLibrary.simpleMessage("Duration:"),
     "duration_weeks": MessageLookupByLibrary.simpleMessage("Duration (Weeks)"),
@@ -261,6 +264,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "month": MessageLookupByLibrary.simpleMessage("Month"),
     "my_cart": MessageLookupByLibrary.simpleMessage("My Cart "),
     "neww": MessageLookupByLibrary.simpleMessage("New"),
+    "next_meals": MessageLookupByLibrary.simpleMessage("Next Meals"),
     "next_set": MessageLookupByLibrary.simpleMessage("Next Set"),
     "next_step": MessageLookupByLibrary.simpleMessage("Next Step"),
     "no_account": MessageLookupByLibrary.simpleMessage(
@@ -274,6 +278,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
     "nutrition": MessageLookupByLibrary.simpleMessage("Nutrition"),
+    "nutrition_plan": MessageLookupByLibrary.simpleMessage("Nutrition Plan"),
     "nutrition_preference": MessageLookupByLibrary.simpleMessage(
       "Nutrition Preference",
     ),
@@ -321,6 +326,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Review the details before accepting.",
     ),
     "save_changes": MessageLookupByLibrary.simpleMessage("Save Changes"),
+    "save_meal_plan": MessageLookupByLibrary.simpleMessage("Save Meal Plan"),
     "save_plan": MessageLookupByLibrary.simpleMessage("Save Plan"),
     "schedule": MessageLookupByLibrary.simpleMessage("Schedule"),
     "schedule_and_training": MessageLookupByLibrary.simpleMessage(

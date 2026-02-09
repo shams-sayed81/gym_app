@@ -99,10 +99,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         focusedBorder: _buildBorder(focused: true),
         suffixIcon: _buildSuffixIcon(),
         prefixIcon:  _buildPrefixIcon(),
-        contentPadding: const EdgeInsets.symmetric(
-          vertical: 10,
-          horizontal: 10,
-        ),
+
       ),
     );
   }
@@ -123,17 +120,17 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
     }
     return null;
   }
-
   Widget? _buildPrefixIcon() {
     if (widget.textInputType == TextInputType.visiblePassword) {
-      return Icon(Icons.lock_outline);
+      return const Icon(Icons.lock_outline);
     } else if (widget.textInputType == TextInputType.emailAddress) {
-      return Icon(Icons.email);
+      return const Icon(Icons.email);
+    } else if (widget.textInputType == TextInputType.phone) {
+      return const Icon(Icons.phone);
+    } else if (widget.icon != null) {
+      return Icon(widget.icon);
     }
-    else if (widget.textInputType == TextInputType.phone) {
-      return Icon(Icons.phone);
-    }
-    return Icon(widget.icon);
+    return null;
   }
 
   OutlineInputBorder _buildBorder({bool focused = false}) {

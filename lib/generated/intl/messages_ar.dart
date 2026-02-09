@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "accessories": MessageLookupByLibrary.simpleMessage("إكسسوارات"),
     "account": MessageLookupByLibrary.simpleMessage("الحساب"),
     "activity": MessageLookupByLibrary.simpleMessage("النشاط"),
+    "add_meal": MessageLookupByLibrary.simpleMessage("إضافة وجبة"),
     "add_session": MessageLookupByLibrary.simpleMessage("إضافة جلسة"),
     "adjust_my_workout_day": MessageLookupByLibrary.simpleMessage(
       "تعديل يوم التمرين الخاص بي",
@@ -130,6 +131,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "تمارين وخطة تغذية مخصصة",
     ),
     "daily_calories": MessageLookupByLibrary.simpleMessage("السعرات اليومية"),
+    "daily_targets": MessageLookupByLibrary.simpleMessage("الأهداف اليومية"),
     "date": MessageLookupByLibrary.simpleMessage("التاريخ"),
     "day": MessageLookupByLibrary.simpleMessage("يوم"),
     "days_per_week": MessageLookupByLibrary.simpleMessage("أيام / أسبوع"),
@@ -138,6 +140,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "تصميم برنامج تدريبي جديد لعضو.",
     ),
     "dessert": MessageLookupByLibrary.simpleMessage("تحلية"),
+    "diet_type": MessageLookupByLibrary.simpleMessage("نوع النظام الغذائي"),
     "dinner": MessageLookupByLibrary.simpleMessage("عشاء"),
     "duration": MessageLookupByLibrary.simpleMessage("المدة:"),
     "duration_weeks": MessageLookupByLibrary.simpleMessage("المدة (بالأسابيع)"),
@@ -250,6 +253,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "month": MessageLookupByLibrary.simpleMessage("شهر"),
     "my_cart": MessageLookupByLibrary.simpleMessage("سلتي "),
     "neww": MessageLookupByLibrary.simpleMessage("جديد"),
+    "next_meals": MessageLookupByLibrary.simpleMessage("الوجبات القادمة"),
     "next_set": MessageLookupByLibrary.simpleMessage("المجموعة التالية"),
     "next_step": MessageLookupByLibrary.simpleMessage("الخطوة التالية"),
     "no_account": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
@@ -261,6 +265,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "notifications": MessageLookupByLibrary.simpleMessage("الإشعارات"),
     "nutrition": MessageLookupByLibrary.simpleMessage("التغذية"),
+    "nutrition_plan": MessageLookupByLibrary.simpleMessage("خطة التغذية"),
     "nutrition_preference": MessageLookupByLibrary.simpleMessage(
       "نظام التغذية المفضل",
     ),
@@ -309,6 +314,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "راجع التفاصيل قبل القبول.",
     ),
     "save_changes": MessageLookupByLibrary.simpleMessage("حفظ التغييرات"),
+    "save_meal_plan": MessageLookupByLibrary.simpleMessage("حفظ خطة الوجبات"),
     "save_plan": MessageLookupByLibrary.simpleMessage("حفظ الخطة"),
     "schedule": MessageLookupByLibrary.simpleMessage("الجدول"),
     "schedule_and_training": MessageLookupByLibrary.simpleMessage(

@@ -8,6 +8,8 @@ import 'package:gym_app/features/coach/chat/manager/messages_cubit.dart';
 import 'package:gym_app/features/coach/home/manager/coach_cubit.dart';
 import 'package:gym_app/features/coach/home/ui/widgets/coach_bottom_nav_bar_view_body.dart';
 import 'package:gym_app/features/coach/home/ui/widgets/member_profile_screen.dart';
+import 'package:gym_app/features/member/eat/widgets/nutrition_overview_screen.dart';
+import 'package:gym_app/features/member/eat/widgets/nutrition_plan_screen.dart';
 import 'package:gym_app/features/member/eat/widgets/plan_ready_screen.dart';
 import 'package:gym_app/features/member/home/manager/member_cubit.dart';
 import 'package:gym_app/features/member/home/ui/widgets/choose_coach_screen.dart';
@@ -19,6 +21,7 @@ import '../../features/auth/ui/views/login_view.dart';
 import '../../features/auth/ui/views/survey_view.dart';
 import '../../features/coach/home/ui/views/coach_bottom_nav_bar_view.dart';
 import '../../features/member/data/models/member_model.dart';
+import '../../features/member/eat/widgets/meal_card.dart';
 import '../../features/member/home/ui/views/bottom_nav_bar_view.dart';
 import '../../features/member/shop/ui/views/cart_view.dart';
 
@@ -119,5 +122,22 @@ class RoutesList {
       path: PlanReadyScreen.routeName,
       builder: (context, state) => const PlanReadyScreen(),
     ),
+
+    GoRoute(
+      path: NutritionPlanScreen.routeName,
+      builder: (context, state) => const NutritionPlanScreen(),
+    ),
+
+    GoRoute(
+      path: NutritionOverviewScreen.routeName,
+      builder: (context, state) {
+        final meals = state.extra as List<MealModel>;
+
+        return NutritionOverviewScreen(
+          meals: meals,
+        );
+      },
+    ),
+
   ];
 }
