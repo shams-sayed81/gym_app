@@ -270,11 +270,25 @@
   "next_meals": "Next Meals",
   "diet_type": "Diet Type",
   "save_meal_plan": "Save Meal Plan",
-  "add_meal": "Add Meal"
-
-
-
-
+  "add_meal": "Add Meal",
+  "carbs": "Carbs",
+  "fat": "Fat",
+  "water_intake": "Water Intake",
+  "sleep_duration": "Sleep Duration",
+  "target": "Target:",
+  "daily_timetable": "Daily Timetable",
+  "daily_nutrition": "Daily Nutrition",
+  "recent_checkins": "Recent Check-ins",
+  "downtown": "Downtown",
+  "uptown": "Uptown",
+  "private_notes": "Private Notes",
+  "save_notes": "Save Notes",
+  "logs_summary": "Logs Summary",
+  "daily_meal_plan": "Daily Meal Plan",
+  "edit": "Edit",
+  "coach_comments": "Coach Comments",
+  "save_comments": "Save Comments",
+  "history": "History"
 
 
 }

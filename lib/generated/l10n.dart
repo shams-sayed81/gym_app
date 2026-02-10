@@ -2073,6 +2073,146 @@ class S {
   String get add_meal {
     return Intl.message('Add Meal', name: 'add_meal', desc: '', args: []);
   }
+
+  /// `Carbs`
+  String get carbs {
+    return Intl.message('Carbs', name: 'carbs', desc: '', args: []);
+  }
+
+  /// `Fat`
+  String get fat {
+    return Intl.message('Fat', name: 'fat', desc: '', args: []);
+  }
+
+  /// `Water Intake`
+  String get water_intake {
+    return Intl.message(
+      'Water Intake',
+      name: 'water_intake',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sleep Duration`
+  String get sleep_duration {
+    return Intl.message(
+      'Sleep Duration',
+      name: 'sleep_duration',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Target:`
+  String get target {
+    return Intl.message('Target:', name: 'target', desc: '', args: []);
+  }
+
+  /// `Daily Timetable`
+  String get daily_timetable {
+    return Intl.message(
+      'Daily Timetable',
+      name: 'daily_timetable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Daily Nutrition`
+  String get daily_nutrition {
+    return Intl.message(
+      'Daily Nutrition',
+      name: 'daily_nutrition',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Recent Check-ins`
+  String get recent_checkins {
+    return Intl.message(
+      'Recent Check-ins',
+      name: 'recent_checkins',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Downtown`
+  String get downtown {
+    return Intl.message('Downtown', name: 'downtown', desc: '', args: []);
+  }
+
+  /// `Uptown`
+  String get uptown {
+    return Intl.message('Uptown', name: 'uptown', desc: '', args: []);
+  }
+
+  /// `Private Notes`
+  String get private_notes {
+    return Intl.message(
+      'Private Notes',
+      name: 'private_notes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save Notes`
+  String get save_notes {
+    return Intl.message('Save Notes', name: 'save_notes', desc: '', args: []);
+  }
+
+  /// `Logs Summary`
+  String get logs_summary {
+    return Intl.message(
+      'Logs Summary',
+      name: 'logs_summary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Daily Meal Plan`
+  String get daily_meal_plan {
+    return Intl.message(
+      'Daily Meal Plan',
+      name: 'daily_meal_plan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit`
+  String get edit {
+    return Intl.message('Edit', name: 'edit', desc: '', args: []);
+  }
+
+  /// `Coach Comments`
+  String get coach_comments {
+    return Intl.message(
+      'Coach Comments',
+      name: 'coach_comments',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save Comments`
+  String get save_comments {
+    return Intl.message(
+      'Save Comments',
+      name: 'save_comments',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `History`
+  String get history {
+    return Intl.message('History', name: 'history', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

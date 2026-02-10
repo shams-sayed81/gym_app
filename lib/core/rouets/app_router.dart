@@ -6,6 +6,7 @@ import 'package:gym_app/features/member/home/ui/widgets/choose_coach_screen.dart
 
 import '../../features/admin/ui/views/admin_view.dart';
 import '../../features/coach/home/ui/views/coach_bottom_nav_bar_view.dart';
+import '../../features/member/eat/widgets/design_nutritio_manualy_screen.dart';
 import '../../features/member/eat/widgets/nutrition_plan_screen.dart';
 import '../../features/member/home/ui/views/bottom_nav_bar_view.dart';
 import '../../features/member/home/ui/widgets/request_sent_screen.dart';
@@ -33,7 +34,8 @@ abstract class AppRouter {
 
     _router = GoRouter(
       navigatorKey: navigatorKey,
-      initialLocation:NutritionPlanScreen.routeName,
+
+      initialLocation:CoachBottomNavBarView.routeName,
       routes: RoutesList.all,
     );
 

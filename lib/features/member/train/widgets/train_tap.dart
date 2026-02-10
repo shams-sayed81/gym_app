@@ -9,6 +9,7 @@ import 'package:gym_app/core/widgets/custom_list_tile.dart';
 import 'package:gym_app/features/member/home/ui/widgets/choose_coach_screen.dart';
 import 'package:gym_app/features/member/train/widgets/design_manually_screen.dart';
 
+import '../../../../core/enums/choose_coach.dart';
 import '../../../../generated/l10n.dart';
 import '../../home/manager/bottom_nav_bar_cubit.dart';
 
@@ -53,7 +54,8 @@ class TrainTab extends StatelessWidget {
           subTitle: s.request_professional_plan,
           icon: Icons.person_outline,
           color: AppColors.purple,
-          onTap: () => context.push(ChooseCoachScreen.routeName),
+          onTap: () => context.push(ChooseCoachScreen.routeName , extra: ChooseCoachSource.train,
+          ),
         ),
       ],
     );

@@ -14,6 +14,7 @@ import 'package:gym_app/features/member/eat/widgets/plan_ready_screen.dart';
 import 'package:gym_app/features/member/home/manager/member_cubit.dart';
 import 'package:gym_app/features/member/home/ui/widgets/choose_coach_screen.dart';
 import 'package:gym_app/features/member/home/ui/widgets/request_sent_screen.dart';
+import 'package:gym_app/features/member/home/ui/widgets/week_summary_screen.dart';
 import 'package:gym_app/features/member/profile/ui/widgets/profile_tab.dart';
 import 'package:gym_app/features/member/train/widgets/design_manually_screen.dart';
 
@@ -21,9 +22,11 @@ import '../../features/auth/ui/views/login_view.dart';
 import '../../features/auth/ui/views/survey_view.dart';
 import '../../features/coach/home/ui/views/coach_bottom_nav_bar_view.dart';
 import '../../features/member/data/models/member_model.dart';
+import '../../features/member/eat/widgets/design_nutritio_manualy_screen.dart';
 import '../../features/member/eat/widgets/meal_card.dart';
 import '../../features/member/home/ui/views/bottom_nav_bar_view.dart';
 import '../../features/member/shop/ui/views/cart_view.dart';
+import '../enums/choose_coach.dart';
 
 class RoutesList {
   static final List<RouteBase> all = [
@@ -59,11 +62,14 @@ class RoutesList {
     ),
     GoRoute(
       path: ChooseCoachScreen.routeName,
+      builder: (context, state) {
 
-      builder: (context, state) => BlocProvider(
-        create: (_) => MemberCubit()..loadCoaches(),
-        child: ChooseCoachScreen(),
-      ),
+        return BlocProvider(
+          create: (context) => MemberCubit()..loadCoaches(),
+          child: ChooseCoachScreen(
+          ),
+        );
+      },
     ),
     //todo cart -----------------------------------------------------
     GoRoute(
@@ -120,12 +126,32 @@ class RoutesList {
 
     GoRoute(
       path: PlanReadyScreen.routeName,
-      builder: (context, state) => const PlanReadyScreen(),
+
+      builder: (context, state) {
+        final source = state.extra as ChooseCoachSource;
+        return PlanReadyScreen(source:source,);
+  }
     ),
 
     GoRoute(
       path: NutritionPlanScreen.routeName,
       builder: (context, state) => const NutritionPlanScreen(),
+    ),
+
+    GoRoute(
+      path: DesignNutritionManuallyScreen.routeName,
+      builder: (context, state) => const DesignNutritionManuallyScreen(),
+    ),
+
+
+    GoRoute(
+      path: WeekSummaryScreen.routeName,
+      builder: (context, state) {
+        final weekPlan =
+        state.extra as List<Map<String, dynamic>>;
+
+        return WeekSummaryScreen(weekPlan: weekPlan,);
+      }
     ),
 
     GoRoute(

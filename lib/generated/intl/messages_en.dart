@@ -84,6 +84,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "bulky": MessageLookupByLibrary.simpleMessage("Bulky"),
     "calories": MessageLookupByLibrary.simpleMessage("Calories"),
     "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
+    "carbs": MessageLookupByLibrary.simpleMessage("Carbs"),
     "carbs_grams": MessageLookupByLibrary.simpleMessage("Carbs (g)"),
     "cardio_stamina": MessageLookupByLibrary.simpleMessage("Cardio & Stamina"),
     "cart_empty": MessageLookupByLibrary.simpleMessage("Your cart is empty"),
@@ -105,6 +106,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "coach_assigned_training": MessageLookupByLibrary.simpleMessage(
       "Coach Assigned (Training)",
     ),
+    "coach_comments": MessageLookupByLibrary.simpleMessage("Coach Comments"),
     "coach_designed_new_plan": MessageLookupByLibrary.simpleMessage(
       "Your coach has designed your new workout plan.",
     ),
@@ -133,7 +135,10 @@ class MessageLookup extends MessageLookupByLibrary {
       "Custom Workouts and Nutrition",
     ),
     "daily_calories": MessageLookupByLibrary.simpleMessage("Daily Calories"),
+    "daily_meal_plan": MessageLookupByLibrary.simpleMessage("Daily Meal Plan"),
+    "daily_nutrition": MessageLookupByLibrary.simpleMessage("Daily Nutrition"),
     "daily_targets": MessageLookupByLibrary.simpleMessage("Daily Targets"),
+    "daily_timetable": MessageLookupByLibrary.simpleMessage("Daily Timetable"),
     "date": MessageLookupByLibrary.simpleMessage("Date"),
     "day": MessageLookupByLibrary.simpleMessage("Day"),
     "days_per_week": MessageLookupByLibrary.simpleMessage("days/week"),
@@ -144,10 +149,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "dessert": MessageLookupByLibrary.simpleMessage("Dessert"),
     "diet_type": MessageLookupByLibrary.simpleMessage("Diet Type"),
     "dinner": MessageLookupByLibrary.simpleMessage("Dinner"),
+    "downtown": MessageLookupByLibrary.simpleMessage("Downtown"),
     "duration": MessageLookupByLibrary.simpleMessage("Duration:"),
     "duration_weeks": MessageLookupByLibrary.simpleMessage("Duration (Weeks)"),
     "eat": MessageLookupByLibrary.simpleMessage("Eat"),
     "eaten_today": MessageLookupByLibrary.simpleMessage("Eaten Today"),
+    "edit": MessageLookupByLibrary.simpleMessage("Edit"),
     "edit_profile": MessageLookupByLibrary.simpleMessage("Edit Profile"),
     "email_or_phone": MessageLookupByLibrary.simpleMessage("Email or phone"),
     "endurance": MessageLookupByLibrary.simpleMessage("Endurance"),
@@ -158,6 +165,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "express": MessageLookupByLibrary.simpleMessage("Express"),
     "extended": MessageLookupByLibrary.simpleMessage("Extended"),
+    "fat": MessageLookupByLibrary.simpleMessage("Fat"),
     "fat_loss": MessageLookupByLibrary.simpleMessage("Fat Loss"),
     "fat_loss_toning": MessageLookupByLibrary.simpleMessage(
       "Fat Loss & Toning",
@@ -191,6 +199,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "high": MessageLookupByLibrary.simpleMessage("High"),
     "high_protein": MessageLookupByLibrary.simpleMessage("High Protein"),
     "hire_coach": MessageLookupByLibrary.simpleMessage("Hire Coach"),
+    "history": MessageLookupByLibrary.simpleMessage("History"),
     "home": MessageLookupByLibrary.simpleMessage("Home"),
     "hrs": MessageLookupByLibrary.simpleMessage("hrs"),
     "hydration": MessageLookupByLibrary.simpleMessage("Hydration"),
@@ -232,6 +241,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "log_weight": MessageLookupByLibrary.simpleMessage("Log Weight"),
     "logged": MessageLookupByLibrary.simpleMessage("Logged"),
     "login": MessageLookupByLibrary.simpleMessage("Log In"),
+    "logs_summary": MessageLookupByLibrary.simpleMessage("Logs Summary"),
     "lose_weight": MessageLookupByLibrary.simpleMessage("Lose Weight"),
     "low_activity": MessageLookupByLibrary.simpleMessage("Low Activity"),
     "lunch": MessageLookupByLibrary.simpleMessage("Lunch"),
@@ -303,11 +313,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "popular_food": MessageLookupByLibrary.simpleMessage("Popular Food"),
     "previous": MessageLookupByLibrary.simpleMessage("Previous"),
     "price": MessageLookupByLibrary.simpleMessage("Price"),
+    "private_notes": MessageLookupByLibrary.simpleMessage("Private Notes"),
     "pro_member": MessageLookupByLibrary.simpleMessage("Pro Member"),
     "profile": MessageLookupByLibrary.simpleMessage("Profile"),
     "protein": MessageLookupByLibrary.simpleMessage("Protein"),
     "protein_grams": MessageLookupByLibrary.simpleMessage("Protein (g)"),
     "real_coach": MessageLookupByLibrary.simpleMessage("Real Coach"),
+    "recent_checkins": MessageLookupByLibrary.simpleMessage("Recent Check-ins"),
     "recipients": MessageLookupByLibrary.simpleMessage("Recipients"),
     "recommended_days": MessageLookupByLibrary.simpleMessage(
       "Recommended: 3-5 days for consistent results.",
@@ -326,7 +338,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Review the details before accepting.",
     ),
     "save_changes": MessageLookupByLibrary.simpleMessage("Save Changes"),
+    "save_comments": MessageLookupByLibrary.simpleMessage("Save Comments"),
     "save_meal_plan": MessageLookupByLibrary.simpleMessage("Save Meal Plan"),
+    "save_notes": MessageLookupByLibrary.simpleMessage("Save Notes"),
     "save_plan": MessageLookupByLibrary.simpleMessage("Save Plan"),
     "schedule": MessageLookupByLibrary.simpleMessage("Schedule"),
     "schedule_and_training": MessageLookupByLibrary.simpleMessage(
@@ -367,6 +381,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Show as Available for new members",
     ),
     "sign_up": MessageLookupByLibrary.simpleMessage("Sign up"),
+    "sleep_duration": MessageLookupByLibrary.simpleMessage("Sleep Duration"),
     "sleep_hrs": MessageLookupByLibrary.simpleMessage("Hrs Sleep"),
     "sleep_importance_description": MessageLookupByLibrary.simpleMessage(
       "Sleep is when your muscles repair and grow. Aiming for 7-9 hours helps optimize your gains from the \"Upper Body Power\" plan.",
@@ -385,6 +400,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "tap_search_egyptian_food": MessageLookupByLibrary.simpleMessage(
       "Tap to search the Egyptian Food Database",
     ),
+    "target": MessageLookupByLibrary.simpleMessage("Target:"),
     "target_body_shape": MessageLookupByLibrary.simpleMessage(
       "Target Body Shape",
     ),
@@ -419,6 +435,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "update_current_weight": MessageLookupByLibrary.simpleMessage(
       "Update Current Weight",
     ),
+    "uptown": MessageLookupByLibrary.simpleMessage("Uptown"),
     "usually_takes_time": MessageLookupByLibrary.simpleMessage(
       "Usually takes 24-48 hours.",
     ),
@@ -432,6 +449,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "waiting_for_coach": MessageLookupByLibrary.simpleMessage(
       "Waiting for Mike Mentzer to create your plan.",
     ),
+    "water_intake": MessageLookupByLibrary.simpleMessage("Water Intake"),
     "water_l": MessageLookupByLibrary.simpleMessage("L Water"),
     "week": MessageLookupByLibrary.simpleMessage("Week"),
     "weekly_schedule": MessageLookupByLibrary.simpleMessage("Weekly Schedule"),

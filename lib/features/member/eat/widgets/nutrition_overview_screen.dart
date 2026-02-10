@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:gym_app/core/helpers/spacing.dart';
+import 'package:gym_app/core/theme/app_colors.dart';
+import 'package:gym_app/core/theme/app_text_styles.dart';
+import 'package:gym_app/features/member/home/ui/views/bottom_nav_bar_view.dart';
 
+import '../../../../generated/l10n.dart';
+import '../../home/ui/widgets/food_dialog.dart';
 import 'meal_card.dart';
 
-class NutritionOverviewScreen extends StatelessWidget {
-  final List<MealModel> meals;
+class NutritionOverviewScreen extends StatefulWidget {
+   List<MealModel> meals;
 
-  const NutritionOverviewScreen({
+   NutritionOverviewScreen({
     super.key,
     required this.meals,
   });
@@ -13,23 +21,37 @@ class NutritionOverviewScreen extends StatelessWidget {
   static const String routeName='/nutrition-overview';
 
   @override
+  State<NutritionOverviewScreen> createState() => _NutritionOverviewScreenState();
+}
+
+class _NutritionOverviewScreenState extends State<NutritionOverviewScreen> {
+  @override
   Widget build(BuildContext context) {
+    final s=S.of(context);
     return Scaffold(
-      backgroundColor: const Color(0xFF0B1020),
+      backgroundColor: AppColors.primary,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        title: const Text('Nutrition'),
+        title:  Text(s.nutrition, style: AppTextStyles.font16WhiteBold,),
+        iconTheme: IconThemeData(color: AppColors.white),
         actions: [
           IconButton(
             icon: const Icon(Icons.refresh),
-            onPressed: () {},
+            onPressed: () {
+              setState(() {
+                widget.meals=[];
+              });
+
+              context.pushReplacement(BottomNavBarView.routeName);
+
+            },
           ),
           Padding(
             padding: const EdgeInsets.only(right: 12),
             child: ElevatedButton.icon(
-              onPressed: () {},
-              icon: const Icon(Icons.add, size: 18),
-              label: const Text('Log Food'),
+              onPressed: ()=> showFoodDialog(context),
+              icon: const Icon(Icons.add, size: 18 , color: Colors.white,),
+              label:  Text(s.log_food, style: AppTextStyles.font16WhiteBold,),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.green,
                 shape: RoundedRectangleBorder(
@@ -55,25 +77,25 @@ class NutritionOverviewScreen extends StatelessWidget {
 
             /// Macros
             Row(
-              children: const [
-                Expanded(child: MacroCard(title: 'Carbs', percent: 50)),
+              children:  [
+                Expanded(child: MacroCard(title: s.carbs, percent: 50)),
                 SizedBox(width: 12),
-                Expanded(child: MacroCard(title: 'Protein', percent: 30)),
+                Expanded(child: MacroCard(title: s.protein, percent: 30)),
                 SizedBox(width: 12),
-                Expanded(child: MacroCard(title: 'Fat', percent: 20)),
+                Expanded(child: MacroCard(title: s.fat, percent: 20)),
               ],
             ),
 
-            const SizedBox(height: 24),
+            vGap(20),
 
             /// Daily Timetable
-            const Text(
-              'Daily Timetable',
-              style: TextStyle(color: Colors.white, fontSize: 16),
+             Text(
+              s.daily_timetable,
+              style: AppTextStyles.font16WhiteBold,
             ),
-            const SizedBox(height: 12),
+            vGap(10),
 
-            ...meals.map(
+            ...widget.meals.map(
                   (meal) => MealTile(
                 time: meal.time,
                 title: meal.title,
@@ -81,25 +103,25 @@ class NutritionOverviewScreen extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(height: 24),
+            vGap(20),
 
             /// Bottom Stats
             Row(
-              children: const [
+              children:  [
                 Expanded(
                   child: InfoCard(
                     icon: Icons.water_drop,
                     title: '1.5L',
-                    subtitle: 'Water Intake\n+ 250ml',
-                    gradient: [Color(0xFF0F2B4D), Color(0xFF08192F)],
+                    subtitle:s.water_intake,
+                    gradient: [AppColors.secondary,AppColors.primary],
                   ),
                 ),
-                SizedBox(width: 12),
+                hGap(10),
                 Expanded(
                   child: InfoCard(
                     icon: Icons.nightlight_round,
                     title: '7h 20m',
-                    subtitle: 'Sleep Duration\nTarget: 8h',
+                    subtitle: '${s.sleep_duration}\n${s.target} 8h',
                     gradient: [Color(0xFF3B145F), Color(0xFF1C0C2E)],
                   ),
                 ),
@@ -129,7 +151,7 @@ class MealTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(bottom: 12),
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         gradient: const LinearGradient(
           colors: [Color(0xFF151A30), Color(0xFF0E1325)],
@@ -228,7 +250,7 @@ class InfoCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 120,
+      height: 120.h,
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         gradient: LinearGradient(colors: gradient),

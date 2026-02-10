@@ -14,7 +14,8 @@ import 'package:gym_app/features/member/home/ui/widgets/request_sent_screen.dart
 import '../../../../../generated/l10n.dart';
 
 class ChooseCoachScreen extends StatelessWidget {
-  const ChooseCoachScreen({super.key});
+
+  const ChooseCoachScreen({super.key });
   static const String routeName = '/choose_coach';
 
   @override

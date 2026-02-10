@@ -39,11 +39,8 @@ class BottomNavBarViewState extends State<BottomNavBarView> {
         weekPlan!.any((day) => (day['selectedExercises'] as List).isNotEmpty))
         ? WeekSummaryScreen(
       weekPlan: weekPlan!,
-      onReset: () {
-        setState(() {
-          weekPlan = null;
-        });
-      },
+
+
     )
         : TrainTab();
 

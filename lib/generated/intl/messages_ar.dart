@@ -80,6 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "bulky": MessageLookupByLibrary.simpleMessage("ضخم"),
     "calories": MessageLookupByLibrary.simpleMessage("السعرات الحرارية"),
     "cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
+    "carbs": MessageLookupByLibrary.simpleMessage("الكربوهيدرات"),
     "carbs_grams": MessageLookupByLibrary.simpleMessage("الكربوهيدرات (جم)"),
     "cardio_stamina": MessageLookupByLibrary.simpleMessage(
       "تمارين الكارديو & قوة التحمل",
@@ -105,6 +106,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "coach_assigned_training": MessageLookupByLibrary.simpleMessage(
       "المدرب المخصص (التدريب)",
     ),
+    "coach_comments": MessageLookupByLibrary.simpleMessage("تعليقات المدرب"),
     "coach_designed_new_plan": MessageLookupByLibrary.simpleMessage(
       "قام مدربك بتصميم خطة التمرين الجديدة الخاصة بك.",
     ),
@@ -131,7 +133,12 @@ class MessageLookup extends MessageLookupByLibrary {
       "تمارين وخطة تغذية مخصصة",
     ),
     "daily_calories": MessageLookupByLibrary.simpleMessage("السعرات اليومية"),
+    "daily_meal_plan": MessageLookupByLibrary.simpleMessage(
+      "خطة الوجبات اليومية",
+    ),
+    "daily_nutrition": MessageLookupByLibrary.simpleMessage("التغذية اليومية"),
     "daily_targets": MessageLookupByLibrary.simpleMessage("الأهداف اليومية"),
+    "daily_timetable": MessageLookupByLibrary.simpleMessage("الجدول اليومي"),
     "date": MessageLookupByLibrary.simpleMessage("التاريخ"),
     "day": MessageLookupByLibrary.simpleMessage("يوم"),
     "days_per_week": MessageLookupByLibrary.simpleMessage("أيام / أسبوع"),
@@ -142,10 +149,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "dessert": MessageLookupByLibrary.simpleMessage("تحلية"),
     "diet_type": MessageLookupByLibrary.simpleMessage("نوع النظام الغذائي"),
     "dinner": MessageLookupByLibrary.simpleMessage("عشاء"),
+    "downtown": MessageLookupByLibrary.simpleMessage("وسط المدينة"),
     "duration": MessageLookupByLibrary.simpleMessage("المدة:"),
     "duration_weeks": MessageLookupByLibrary.simpleMessage("المدة (بالأسابيع)"),
     "eat": MessageLookupByLibrary.simpleMessage("تغذية"),
     "eaten_today": MessageLookupByLibrary.simpleMessage("ما تم تناوله اليوم"),
+    "edit": MessageLookupByLibrary.simpleMessage("تعديل"),
     "email_or_phone": MessageLookupByLibrary.simpleMessage(
       "البريد الإلكتروني أو رقم الهاتف",
     ),
@@ -153,6 +162,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "exercises": MessageLookupByLibrary.simpleMessage("تمارين"),
     "express": MessageLookupByLibrary.simpleMessage("سريع"),
     "extended": MessageLookupByLibrary.simpleMessage("ممتد"),
+    "fat": MessageLookupByLibrary.simpleMessage("الدهون"),
     "fat_loss": MessageLookupByLibrary.simpleMessage("خسارة الدهون"),
     "fat_loss_toning": MessageLookupByLibrary.simpleMessage(
       "حرق الدهون & شد الجسم",
@@ -184,6 +194,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "high": MessageLookupByLibrary.simpleMessage("عالٍ"),
     "high_protein": MessageLookupByLibrary.simpleMessage("عالي البروتين"),
     "hire_coach": MessageLookupByLibrary.simpleMessage("توظيف مدرب"),
+    "history": MessageLookupByLibrary.simpleMessage("السجل"),
     "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
     "hrs": MessageLookupByLibrary.simpleMessage("ساعات"),
     "hydration": MessageLookupByLibrary.simpleMessage("الترطيب"),
@@ -221,6 +232,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "log_weight": MessageLookupByLibrary.simpleMessage("تسجيل الوزن"),
     "logged": MessageLookupByLibrary.simpleMessage("تم التسجيل"),
     "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "logs_summary": MessageLookupByLibrary.simpleMessage("ملخص السجلات"),
     "lose_weight": MessageLookupByLibrary.simpleMessage("فقدان الوزن"),
     "low_activity": MessageLookupByLibrary.simpleMessage("نشاط منخفض"),
     "lunch": MessageLookupByLibrary.simpleMessage("غداء"),
@@ -292,11 +304,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "popular_food": MessageLookupByLibrary.simpleMessage("أطعمة شائعة"),
     "previous": MessageLookupByLibrary.simpleMessage("السابق"),
     "price": MessageLookupByLibrary.simpleMessage("السعر"),
+    "private_notes": MessageLookupByLibrary.simpleMessage("ملاحظات خاصة"),
     "pro_member": MessageLookupByLibrary.simpleMessage("عضو مميز"),
     "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
     "protein": MessageLookupByLibrary.simpleMessage("البروتين"),
     "protein_grams": MessageLookupByLibrary.simpleMessage("البروتين (جم)"),
     "real_coach": MessageLookupByLibrary.simpleMessage("مدرب حقيقي"),
+    "recent_checkins": MessageLookupByLibrary.simpleMessage(
+      "التسجيلات الأخيرة",
+    ),
     "recipients": MessageLookupByLibrary.simpleMessage("المستلمون"),
     "recommended_days": MessageLookupByLibrary.simpleMessage(
       "موصى به: 3-5 أيام للحصول على نتائج مستمرة.",
@@ -314,7 +330,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "راجع التفاصيل قبل القبول.",
     ),
     "save_changes": MessageLookupByLibrary.simpleMessage("حفظ التغييرات"),
+    "save_comments": MessageLookupByLibrary.simpleMessage("حفظ التعليقات"),
     "save_meal_plan": MessageLookupByLibrary.simpleMessage("حفظ خطة الوجبات"),
+    "save_notes": MessageLookupByLibrary.simpleMessage("حفظ الملاحظات"),
     "save_plan": MessageLookupByLibrary.simpleMessage("حفظ الخطة"),
     "schedule": MessageLookupByLibrary.simpleMessage("الجدول"),
     "schedule_and_training": MessageLookupByLibrary.simpleMessage(
@@ -344,6 +362,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
     "shop": MessageLookupByLibrary.simpleMessage("المتجر"),
     "sign_up": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
+    "sleep_duration": MessageLookupByLibrary.simpleMessage("مدة النوم"),
     "sleep_hrs": MessageLookupByLibrary.simpleMessage("ساعات النوم"),
     "sleep_importance_description": MessageLookupByLibrary.simpleMessage(
       "النوم هو الوقت الذي تتعافى فيه عضلاتك وتنمو. استهداف من 7 إلى 9 ساعات يساعدك على تحقيق أفضل نتائج من خطة \"قوة الجزء العلوي من الجسم\".",
@@ -363,6 +382,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "tap_search_egyptian_food": MessageLookupByLibrary.simpleMessage(
       "اضغط للبحث في قاعدة بيانات الأطعمة المصرية",
     ),
+    "target": MessageLookupByLibrary.simpleMessage("الهدف:"),
     "target_body_shape": MessageLookupByLibrary.simpleMessage(
       "شكل الجسم المستهدف",
     ),
@@ -393,6 +413,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "update_current_weight": MessageLookupByLibrary.simpleMessage(
       "تحديث الوزن الحالي",
     ),
+    "uptown": MessageLookupByLibrary.simpleMessage("المدينة العليا"),
     "usually_takes_time": MessageLookupByLibrary.simpleMessage(
       "يستغرق عادة من 24 إلى 48 ساعة.",
     ),
@@ -406,6 +427,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "waiting_for_coach": MessageLookupByLibrary.simpleMessage(
       "في انتظار مايك منتزر لإنشاء خطتك.",
     ),
+    "water_intake": MessageLookupByLibrary.simpleMessage("كمية المياه"),
     "water_l": MessageLookupByLibrary.simpleMessage("الماء (لتر)"),
     "week": MessageLookupByLibrary.simpleMessage("أسبوع"),
     "weekly_schedule": MessageLookupByLibrary.simpleMessage("الجدول الأسبوعي"),

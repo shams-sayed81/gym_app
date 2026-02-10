@@ -7,9 +7,9 @@ import 'package:gym_app/core/theme/app_text_styles.dart';
 import 'package:gym_app/core/widgets/custom_button.dart';
 
 import '../../../../generated/l10n.dart';
-import '../../home/ui/widgets/week_summary_screen.dart';
+import 'nutrition_overview_screen.dart';
 
-Future<void> showProposalDialog(BuildContext context) async {
+Future<void> showNutritionProposalDialog(BuildContext context) async {
   if (!context.mounted) return;
 
   showDialog(
@@ -63,8 +63,35 @@ Future<void> showProposalDialog(BuildContext context) async {
                       vGap(5),
                       const Divider(),
                       vGap(5),
-                      Text(s.target_goal,
+                      Text(s.daily_nutrition,
                           style: AppTextStyles.font16WhiteBold),
+                      vGap(5),
+                      ListView.separated(
+                        shrinkWrap: true,
+                        scrollDirection: Axis.horizontal,
+                        physics: NeverScrollableScrollPhysics(),
+                        itemBuilder: (context, index) => Container(
+                          decoration: AppDecorations.containerDecoration
+                              .copyWith(color: AppColors.primary),
+                          padding: EdgeInsets.all(10),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text('data',
+                                  style: AppTextStyles.font16WhiteRegular),
+                              Text(
+                                'data',
+                                style: AppTextStyles.font16WhiteRegular.copyWith(
+                                  color: AppColors.emerald,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        separatorBuilder: (context, index) => vGap(5),
+                        itemCount: 3,
+                      ),
+                      vGap(5),
                       ListView.separated(
                         shrinkWrap: true,
                         physics: NeverScrollableScrollPhysics(),
@@ -87,7 +114,7 @@ Future<void> showProposalDialog(BuildContext context) async {
                           ),
                         ),
                         separatorBuilder: (context, index) => vGap(5),
-                        itemCount: 5,
+                        itemCount: 3,
                       ),
                     ],
                   ),
@@ -95,7 +122,7 @@ Future<void> showProposalDialog(BuildContext context) async {
                 vGap(10),
                 CustomButton(
                   text: s.accept_plan,
-                  onPressed: () => context.pushReplacement(WeekSummaryScreen.routeName,),
+                  onPressed: () => context.pushReplacement(NutritionOverviewScreen.routeName,)
                 ),
                 vGap(10),
                 CustomButton(

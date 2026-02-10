@@ -7,9 +7,9 @@ import '../../../../../generated/l10n.dart';
 
 class WeekSummaryScreen extends StatefulWidget {
   final List<Map<String, dynamic>> weekPlan;
-  final VoidCallback onReset;
 
-  const WeekSummaryScreen({super.key, required this.weekPlan, required this.onReset});
+  const WeekSummaryScreen({super.key, required this.weekPlan});
+  static const String routeName = '/week-summary';
 
   @override
   State<WeekSummaryScreen> createState() => _WeekSummaryScreenState();
@@ -18,7 +18,15 @@ class WeekSummaryScreen extends StatefulWidget {
 class _WeekSummaryScreenState extends State<WeekSummaryScreen> {
   int selectedDayIndex = 0;
 
-  final List<String> weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  final List<String> weekDays = [
+    'Mon',
+    'Tue',
+    'Wed',
+    'Thu',
+    'Fri',
+    'Sat',
+    'Sun',
+  ];
 
   late List<Map<String, dynamic>> fullWeekPlan;
 
@@ -27,7 +35,7 @@ class _WeekSummaryScreenState extends State<WeekSummaryScreen> {
     super.initState();
     fullWeekPlan = List.generate(
       7,
-          (index) => index < widget.weekPlan.length
+      (index) => index < widget.weekPlan.length
           ? widget.weekPlan[index]
           : {'type': null, 'selectedExercises': <String>[]},
     );
@@ -35,7 +43,7 @@ class _WeekSummaryScreenState extends State<WeekSummaryScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final s=S.of(context);
+    final s = S.of(context);
     final day = fullWeekPlan[selectedDayIndex];
     final exercises = (day['selectedExercises'] as List<String>? ?? []);
 
@@ -45,20 +53,19 @@ class _WeekSummaryScreenState extends State<WeekSummaryScreen> {
         backgroundColor: AppColors.primary,
         iconTheme: const IconThemeData(color: Colors.white),
         actions: [
-          IconButton(onPressed: widget.onReset, icon: Icon(Icons.refresh, color: AppColors.white,))
+          IconButton(
+            onPressed: () {
+              //todo -------------------
+            },
+            icon: Icon(Icons.refresh, color: AppColors.white),
+          ),
         ],
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              s.custom_plan,
-              style: AppTextStyles.font16WhiteBold,
-            ),
+            Text(s.custom_plan, style: AppTextStyles.font16WhiteBold),
             const SizedBox(height: 4),
-            Text(
-              s.target_custom,
-              style: AppTextStyles.font14WhiteRegular,
-            ),
+            Text(s.target_custom, style: AppTextStyles.font14WhiteRegular),
           ],
         ),
       ),
@@ -81,7 +88,10 @@ class _WeekSummaryScreenState extends State<WeekSummaryScreen> {
                   },
                   child: Container(
                     width: 70,
-                    margin: const EdgeInsets.symmetric(horizontal: 6, vertical: 10),
+                    margin: const EdgeInsets.symmetric(
+                      horizontal: 6,
+                      vertical: 10,
+                    ),
                     decoration: BoxDecoration(
                       color: isSelected ? Colors.greenAccent : Colors.grey[800],
                       borderRadius: BorderRadius.circular(12),
@@ -107,23 +117,26 @@ class _WeekSummaryScreenState extends State<WeekSummaryScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: exercises.isNotEmpty
                   ? ListView.builder(
-                itemCount: exercises.length,
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 4),
-                    child: Text(
-                      '- ${exercises[index]}',
-                      style: const TextStyle(color: Colors.white70, fontSize: 16),
-                    ),
-                  );
-                },
-              )
+                      itemCount: exercises.length,
+                      itemBuilder: (context, index) {
+                        return Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 4),
+                          child: Text(
+                            '- ${exercises[index]}',
+                            style: const TextStyle(
+                              color: Colors.white70,
+                              fontSize: 16,
+                            ),
+                          ),
+                        );
+                      },
+                    )
                   : const Center(
-                child: Text(
-                  'No exercises selected',
-                  style: TextStyle(color: Colors.white38, fontSize: 16),
-                ),
-              ),
+                      child: Text(
+                        'No exercises selected',
+                        style: TextStyle(color: Colors.white38, fontSize: 16),
+                      ),
+                    ),
             ),
           ),
         ],

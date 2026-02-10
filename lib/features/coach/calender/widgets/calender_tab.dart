@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:gym_app/core/widgets/custom_tab_bar.dart';
+import 'package:gym_app/features/coach/calender/widgets/week_tab_bar_view.dart';
 
 import '../../../../generated/l10n.dart';
 import 'day_tab_bar_view.dart';
@@ -23,7 +24,17 @@ class CalenderTab extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(10),
               child: TabBarView(
-                children: [DayTabBarView(), DayTabBarView(), DayTabBarView()],
+                children: [DayTabBarView(), WeekTabBarView(
+                  weekSessions: {
+                    'Mon': [],
+                    'Tue': [],
+                    'Wed': [],
+                    'Thu': [],
+                    'Fri': [],
+                    'Sat': [],
+                    'Sun': [],
+                  },
+                ), DayTabBarView()],
               ),
             ),
           ),

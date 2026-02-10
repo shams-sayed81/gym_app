@@ -118,9 +118,6 @@ class _DaysContainersScreenState extends State<DaysContainersScreen> {
               MaterialPageRoute(
                 builder: (_) => WeekSummaryScreen(
                   weekPlan: weekPlan,
-                  onReset: () {
-                    Navigator.pop(context);
-                  },
                 ),
               ),
             );

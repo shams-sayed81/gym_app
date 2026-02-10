@@ -258,5 +258,28 @@
   "next_meals": "الوجبات القادمة",
   "diet_type": "نوع النظام الغذائي",
   "save_meal_plan": "حفظ خطة الوجبات",
-  "add_meal": "إضافة وجبة"
+  "add_meal": "إضافة وجبة",
+  "carbs": "الكربوهيدرات",
+  "fat": "الدهون",
+  "water_intake": "كمية المياه",
+  "sleep_duration": "مدة النوم",
+  "target": "الهدف:",
+  "daily_timetable": "الجدول اليومي",
+  "daily_nutrition": "التغذية اليومية",
+  "recent_checkins": "التسجيلات الأخيرة",
+  "downtown": "وسط المدينة",
+  "uptown": "المدينة العليا",
+  "private_notes": "ملاحظات خاصة",
+  "save_notes": "حفظ الملاحظات",
+  "logs_summary": "ملخص السجلات",
+  "daily_meal_plan": "خطة الوجبات اليومية",
+  "edit": "تعديل",
+  "coach_comments": "تعليقات المدرب",
+  "save_comments": "حفظ التعليقات",
+  "history": "السجل"
+
+
+
+
+
 }
