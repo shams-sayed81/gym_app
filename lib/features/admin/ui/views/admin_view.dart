@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_app/core/theme/app_colors.dart';
 import 'package:gym_app/core/theme/app_text_styles.dart';
-import 'package:gym_app/features/auth/ui/widgets/login_view_body.dart';
 
 import '../../../../core/enums/admin_tab.dart';
+import '../../../../generated/l10n.dart';
 import '../widgets/admin_view_body.dart';
 import '../widgets/analytics_body.dart';
 import '../widgets/check_ins_body.dart';
@@ -25,6 +25,7 @@ class AdminView extends StatefulWidget {
 }
 
 class _AdminViewState extends State<AdminView> {
+
   AdminTab _currentTab = AdminTab.dashboard;
 
   Widget _buildBody() {
@@ -60,12 +61,11 @@ class _AdminViewState extends State<AdminView> {
     }
   }
 
-  String _title() {
-    return _currentTab.name.toUpperCase();
-  }
+
 
   @override
   Widget build(BuildContext context) {
+    final s=S.of(context);
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -74,9 +74,9 @@ class _AdminViewState extends State<AdminView> {
           backgroundColor: AppColors.primary,
 
           title: ListTile(
-            title: Text('Overview', style: AppTextStyles.font16WhiteBold),
+            title: Text(s.overview, style: AppTextStyles.font16WhiteBold),
             subtitle: Text(
-              'Welcome back!',
+              s.welcome_back,
               style: AppTextStyles.font14GreyRegular,
             ),
           ),
@@ -108,7 +108,6 @@ class _AppDrawer extends StatelessWidget {
   final Color color;
 
   const _AppDrawer({
-    super.key,
     required this.currentTab,
     required this.onSelect,
     this.color = Colors.white54,
@@ -116,29 +115,30 @@ class _AppDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s=S.of(context);
     return Drawer(
       backgroundColor: AppColors.secondary,
       child: ListView(
         children: [
           DrawerHeader(
             child: Text(
-              'Gym Admin',
+              s.gym_admin,
               style: AppTextStyles.font16WhiteBold.copyWith(
                 color: AppColors.purple,
               ),
             ),
           ),
 
-          _item(Icons.dashboard, 'Dashboard', AdminTab.dashboard),
-          _item(Icons.people, 'Members', AdminTab.members),
-          _item(Icons.card_giftcard, 'Coaches', AdminTab.coaches),
-          _item(Icons.credit_card, 'Plans', AdminTab.plan),
-          _item(Icons.person_add_alt, 'Check-ins', AdminTab.check),
-          _item(Icons.receipt_long, 'Market', AdminTab.market),
-          _item(Icons.bar_chart_rounded, 'Analytics', AdminTab.analytics),
-          _item(Icons.percent, 'Marketing', AdminTab.marketing),
-          _item(Icons.label_outline_rounded, 'Staff', AdminTab.staff),
-          _item(Icons.settings, 'Settings', AdminTab.settings),
+          _item(Icons.dashboard,s.dashboard, AdminTab.dashboard),
+          _item(Icons.people, s.members, AdminTab.members),
+          _item(Icons.card_giftcard, s.coaches, AdminTab.coaches),
+          _item(Icons.credit_card, s.plans, AdminTab.plan),
+          _item(Icons.person_add_alt, s.check_ins, AdminTab.check),
+          _item(Icons.receipt_long, s.market, AdminTab.market),
+          _item(Icons.bar_chart_rounded, s.analytics, AdminTab.analytics),
+          _item(Icons.percent, s.marketing, AdminTab.marketing),
+          _item(Icons.label_outline_rounded, s.staff, AdminTab.staff),
+          _item(Icons.settings, s.settings, AdminTab.settings),
         ],
       ),
     );
@@ -155,7 +155,7 @@ class _AppDrawer extends StatelessWidget {
           color: isSelected ? AppColors.purple : color,
         ),
       ),
-      tileColor: isSelected ? AppColors.purple.withOpacity(.12) : null,
+      tileColor: isSelected ? AppColors.purple.withValues(alpha: .12) : null,
       onTap: () => onSelect(tab),
     );
   }

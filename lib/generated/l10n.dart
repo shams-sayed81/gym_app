@@ -2213,6 +2213,261 @@ class S {
   String get history {
     return Intl.message('History', name: 'history', desc: '', args: []);
   }
+
+  /// `View Summary`
+  String get view_summary {
+    return Intl.message(
+      'View Summary',
+      name: 'view_summary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Preview`
+  String get preview {
+    return Intl.message('Preview', name: 'preview', desc: '', args: []);
+  }
+
+  /// `Gym Admin`
+  String get gym_admin {
+    return Intl.message('Gym Admin', name: 'gym_admin', desc: '', args: []);
+  }
+
+  /// `Dashboard`
+  String get dashboard {
+    return Intl.message('Dashboard', name: 'dashboard', desc: '', args: []);
+  }
+
+  /// `Coaches`
+  String get coaches {
+    return Intl.message('Coaches', name: 'coaches', desc: '', args: []);
+  }
+
+  /// `Plans`
+  String get plans {
+    return Intl.message('Plans', name: 'plans', desc: '', args: []);
+  }
+
+  /// `Check-Ins`
+  String get check_ins {
+    return Intl.message('Check-Ins', name: 'check_ins', desc: '', args: []);
+  }
+
+  /// `Analytics`
+  String get analytics {
+    return Intl.message('Analytics', name: 'analytics', desc: '', args: []);
+  }
+
+  /// `Marketing`
+  String get marketing {
+    return Intl.message('Marketing', name: 'marketing', desc: '', args: []);
+  }
+
+  /// `Staff`
+  String get staff {
+    return Intl.message('Staff', name: 'staff', desc: '', args: []);
+  }
+
+  /// `Top Products`
+  String get top_products {
+    return Intl.message(
+      'Top Products',
+      name: 'top_products',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Live Status`
+  String get live_status {
+    return Intl.message('Live Status', name: 'live_status', desc: '', args: []);
+  }
+
+  /// `Members Currently Inside`
+  String get members_currently_inside {
+    return Intl.message(
+      'Members Currently Inside',
+      name: 'members_currently_inside',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Active`
+  String get active {
+    return Intl.message('Active', name: 'active', desc: '', args: []);
+  }
+
+  /// `Sessions`
+  String get sessions {
+    return Intl.message('Sessions', name: 'sessions', desc: '', args: []);
+  }
+
+  /// `Products`
+  String get products {
+    return Intl.message('Products', name: 'products', desc: '', args: []);
+  }
+
+  /// `Orders`
+  String get orders {
+    return Intl.message('Orders', name: 'orders', desc: '', args: []);
+  }
+
+  /// `Promo Codes`
+  String get promo_codes {
+    return Intl.message('Promo Codes', name: 'promo_codes', desc: '', args: []);
+  }
+
+  /// `Manage discounts and offers`
+  String get manage_discounts_offers {
+    return Intl.message(
+      'Manage discounts and offers',
+      name: 'manage_discounts_offers',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Code`
+  String get enter_code {
+    return Intl.message('Enter Code', name: 'enter_code', desc: '', args: []);
+  }
+
+  /// `Create`
+  String get create {
+    return Intl.message('Create', name: 'create', desc: '', args: []);
+  }
+
+  /// `Push Notifications`
+  String get push_notifications {
+    return Intl.message(
+      'Push Notifications',
+      name: 'push_notifications',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Audience`
+  String get audience {
+    return Intl.message('Audience', name: 'audience', desc: '', args: []);
+  }
+
+  /// `No members found`
+  String get no_members_found {
+    return Intl.message(
+      'No members found',
+      name: 'no_members_found',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search by name`
+  String get search_by_name {
+    return Intl.message(
+      'Search by name',
+      name: 'search_by_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Inactive`
+  String get inactive {
+    return Intl.message('Inactive', name: 'inactive', desc: '', args: []);
+  }
+
+  /// `Frozen`
+  String get frozen {
+    return Intl.message('Frozen', name: 'frozen', desc: '', args: []);
+  }
+
+  /// `Expiring`
+  String get expiring {
+    return Intl.message('Expiring', name: 'expiring', desc: '', args: []);
+  }
+
+  /// `View Profile`
+  String get view_profile {
+    return Intl.message(
+      'View Profile',
+      name: 'view_profile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Last Check-in`
+  String get last_check_in {
+    return Intl.message(
+      'Last Check-in',
+      name: 'last_check_in',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Status`
+  String get status {
+    return Intl.message('Status', name: 'status', desc: '', args: []);
+  }
+
+  /// `Plan`
+  String get plan {
+    return Intl.message('Plan', name: 'plan', desc: '', args: []);
+  }
+
+  /// `Edit Plan`
+  String get edit_plan {
+    return Intl.message('Edit Plan', name: 'edit_plan', desc: '', args: []);
+  }
+
+  /// `Active Members`
+  String get active_members {
+    return Intl.message(
+      'Active Members',
+      name: 'active_members',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Inventory`
+  String get inventory {
+    return Intl.message('Inventory', name: 'inventory', desc: '', args: []);
+  }
+
+  /// `Add Product`
+  String get add_product {
+    return Intl.message('Add Product', name: 'add_product', desc: '', args: []);
+  }
+
+  /// `Add Staff`
+  String get add_staff {
+    return Intl.message('Add Staff', name: 'add_staff', desc: '', args: []);
+  }
+
+  /// `Name`
+  String get name {
+    return Intl.message('Name', name: 'name', desc: '', args: []);
+  }
+
+  /// `Role`
+  String get role {
+    return Intl.message('Role', name: 'role', desc: '', args: []);
+  }
+
+  /// `Access`
+  String get access {
+    return Intl.message('Access', name: 'access', desc: '', args: []);
+  }
+
+  /// `Actions`
+  String get actions {
+    return Intl.message('Actions', name: 'actions', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

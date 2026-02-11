@@ -23,11 +23,17 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "accept_plan": MessageLookupByLibrary.simpleMessage("قبول الخطة"),
+    "access": MessageLookupByLibrary.simpleMessage("الصلاحيات"),
     "accessories": MessageLookupByLibrary.simpleMessage("إكسسوارات"),
     "account": MessageLookupByLibrary.simpleMessage("الحساب"),
+    "actions": MessageLookupByLibrary.simpleMessage("الإجراءات"),
+    "active": MessageLookupByLibrary.simpleMessage("نشط"),
+    "active_members": MessageLookupByLibrary.simpleMessage("الأعضاء النشطون"),
     "activity": MessageLookupByLibrary.simpleMessage("النشاط"),
     "add_meal": MessageLookupByLibrary.simpleMessage("إضافة وجبة"),
+    "add_product": MessageLookupByLibrary.simpleMessage("إضافة منتج"),
     "add_session": MessageLookupByLibrary.simpleMessage("إضافة جلسة"),
+    "add_staff": MessageLookupByLibrary.simpleMessage("إضافة موظف"),
     "adjust_my_workout_day": MessageLookupByLibrary.simpleMessage(
       "تعديل يوم التمرين الخاص بي",
     ),
@@ -45,6 +51,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "analysis_projection": MessageLookupByLibrary.simpleMessage(
       "التحليل والتوقعات",
     ),
+    "analytics": MessageLookupByLibrary.simpleMessage("التحليلات"),
     "analyzing_your_metrics": MessageLookupByLibrary.simpleMessage(
       "جارٍ تحليل بياناتك",
     ),
@@ -65,6 +72,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "أكلت شيئًا آخر",
     ),
     "athletic": MessageLookupByLibrary.simpleMessage("رياضي"),
+    "audience": MessageLookupByLibrary.simpleMessage("الجمهور"),
     "back": MessageLookupByLibrary.simpleMessage("رجوع"),
     "back_to_dashboard": MessageLookupByLibrary.simpleMessage(
       "العودة إلى لوحة التحكم",
@@ -94,6 +102,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "المكملات الغذائية",
     ),
     "chat": MessageLookupByLibrary.simpleMessage("الدردشة"),
+    "check_ins": MessageLookupByLibrary.simpleMessage("التسجيلات"),
     "checkout": MessageLookupByLibrary.simpleMessage("الدفع"),
     "choose_how_to_build_plan": MessageLookupByLibrary.simpleMessage(
       "اختر كيف تريد بناء خطة تغذيتك",
@@ -114,10 +123,12 @@ class MessageLookup extends MessageLookupByLibrary {
       "قام مدربك بتصميم خطة التمرين الجديدة الخاصة بك.",
     ),
     "coach_proposal": MessageLookupByLibrary.simpleMessage("مقترح المدرب"),
+    "coaches": MessageLookupByLibrary.simpleMessage("المدربون"),
     "completed": MessageLookupByLibrary.simpleMessage("مكتملة"),
     "confirm_and_pay": MessageLookupByLibrary.simpleMessage("تأكيد والدفع"),
     "confirm_request": MessageLookupByLibrary.simpleMessage("تأكيد الطلب"),
     "continu": MessageLookupByLibrary.simpleMessage("استمرار"),
+    "create": MessageLookupByLibrary.simpleMessage("إنشاء"),
     "create_account": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
     "create_draft": MessageLookupByLibrary.simpleMessage("إنشاء مسودة"),
     "create_new_training_plan": MessageLookupByLibrary.simpleMessage(
@@ -139,6 +150,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "daily_nutrition": MessageLookupByLibrary.simpleMessage("التغذية اليومية"),
     "daily_targets": MessageLookupByLibrary.simpleMessage("الأهداف اليومية"),
     "daily_timetable": MessageLookupByLibrary.simpleMessage("الجدول اليومي"),
+    "dashboard": MessageLookupByLibrary.simpleMessage("لوحة التحكم"),
     "date": MessageLookupByLibrary.simpleMessage("التاريخ"),
     "day": MessageLookupByLibrary.simpleMessage("يوم"),
     "days_per_week": MessageLookupByLibrary.simpleMessage("أيام / أسبوع"),
@@ -155,11 +167,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "eat": MessageLookupByLibrary.simpleMessage("تغذية"),
     "eaten_today": MessageLookupByLibrary.simpleMessage("ما تم تناوله اليوم"),
     "edit": MessageLookupByLibrary.simpleMessage("تعديل"),
+    "edit_plan": MessageLookupByLibrary.simpleMessage("تعديل الخطة"),
     "email_or_phone": MessageLookupByLibrary.simpleMessage(
       "البريد الإلكتروني أو رقم الهاتف",
     ),
     "endurance": MessageLookupByLibrary.simpleMessage("التحمل"),
+    "enter_code": MessageLookupByLibrary.simpleMessage("إدخال الكود"),
     "exercises": MessageLookupByLibrary.simpleMessage("تمارين"),
+    "expiring": MessageLookupByLibrary.simpleMessage("قارب على الانتهاء"),
     "express": MessageLookupByLibrary.simpleMessage("سريع"),
     "extended": MessageLookupByLibrary.simpleMessage("ممتد"),
     "fat": MessageLookupByLibrary.simpleMessage("الدهون"),
@@ -174,6 +189,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "focus": MessageLookupByLibrary.simpleMessage("تركيز"),
     "food_search": MessageLookupByLibrary.simpleMessage("البحث عن طعام"),
     "frequency": MessageLookupByLibrary.simpleMessage("عدد الأيام:"),
+    "frozen": MessageLookupByLibrary.simpleMessage("مجمّد"),
     "fuel_your_body": MessageLookupByLibrary.simpleMessage("غذّي جسمك"),
     "gear": MessageLookupByLibrary.simpleMessage("معدات"),
     "generate_a_meal_plan_instantly": MessageLookupByLibrary.simpleMessage(
@@ -188,6 +204,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "جارٍ إنشاء خطتك",
     ),
     "goal": MessageLookupByLibrary.simpleMessage("الهدف:"),
+    "gym_admin": MessageLookupByLibrary.simpleMessage("إدارة النادي"),
     "hello_ai_coach": MessageLookupByLibrary.simpleMessage(
       "مرحباً! أنا مدربك الذكي. أستطيع مساعدتك في تخصيص تدريبك، إعداد خطط وجبات، أو تعديل أهدافك. ماذا تريد أن تفعل اليوم؟",
     ),
@@ -208,6 +225,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "i_want_to_lose_fat": MessageLookupByLibrary.simpleMessage(
       "أريد خسارة الدهون",
     ),
+    "inactive": MessageLookupByLibrary.simpleMessage("غير نشط"),
     "inbody": MessageLookupByLibrary.simpleMessage("إنبودي"),
     "input_your_own_macros_and_meals": MessageLookupByLibrary.simpleMessage(
       "ادخل الماكروز والوجبات الخاصة بك",
@@ -216,12 +234,15 @@ class MessageLookup extends MessageLookupByLibrary {
       "خطة شخصية فورية",
     ),
     "intensity": MessageLookupByLibrary.simpleMessage("شدة"),
+    "inventory": MessageLookupByLibrary.simpleMessage("المخزون"),
     "kcal": MessageLookupByLibrary.simpleMessage("سعرات حرارية"),
     "keto": MessageLookupByLibrary.simpleMessage("كيتو"),
     "language": MessageLookupByLibrary.simpleMessage("AR"),
     "language_option": MessageLookupByLibrary.simpleMessage("اللغة "),
+    "last_check_in": MessageLookupByLibrary.simpleMessage("آخر تسجيل دخول"),
     "lean_and_toned": MessageLookupByLibrary.simpleMessage("رشيق ومشدود"),
     "lets_get_started": MessageLookupByLibrary.simpleMessage("لنبدأ"),
+    "live_status": MessageLookupByLibrary.simpleMessage("الحالة المباشرة"),
     "log_food": MessageLookupByLibrary.simpleMessage("تسجيل طعام"),
     "log_in": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "log_meal": MessageLookupByLibrary.simpleMessage("سجل وجبتك"),
@@ -245,13 +266,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "make_nutrition_plan": MessageLookupByLibrary.simpleMessage(
       "إعداد خطة التغذية",
     ),
+    "manage_discounts_offers": MessageLookupByLibrary.simpleMessage(
+      "إدارة الخصومات والعروض",
+    ),
     "market": MessageLookupByLibrary.simpleMessage("السوق"),
+    "marketing": MessageLookupByLibrary.simpleMessage("التسويق"),
     "me": MessageLookupByLibrary.simpleMessage("حسابي"),
     "member": MessageLookupByLibrary.simpleMessage("عضو"),
     "member_profile": MessageLookupByLibrary.simpleMessage(
       "الملف الشخصي للعضو",
     ),
     "members": MessageLookupByLibrary.simpleMessage("الأعضاء"),
+    "members_currently_inside": MessageLookupByLibrary.simpleMessage(
+      "الأعضاء المتواجدون حالياً",
+    ),
     "members_to_follow_up": MessageLookupByLibrary.simpleMessage(
       "الأعضاء الذين يحتاجون للمتابعة",
     ),
@@ -264,6 +292,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "mobility_health": MessageLookupByLibrary.simpleMessage("الحركة & الصحة"),
     "month": MessageLookupByLibrary.simpleMessage("شهر"),
     "my_cart": MessageLookupByLibrary.simpleMessage("سلتي "),
+    "name": MessageLookupByLibrary.simpleMessage("الاسم"),
     "neww": MessageLookupByLibrary.simpleMessage("جديد"),
     "next_meals": MessageLookupByLibrary.simpleMessage("الوجبات القادمة"),
     "next_set": MessageLookupByLibrary.simpleMessage("المجموعة التالية"),
@@ -271,6 +300,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "no_account": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
     "no_active_plan": MessageLookupByLibrary.simpleMessage("لا توجد خطة نشطة"),
     "no_meal_plan": MessageLookupByLibrary.simpleMessage("لا توجد خطة وجبات"),
+    "no_members_found": MessageLookupByLibrary.simpleMessage("لا يوجد أعضاء"),
     "no_products": MessageLookupByLibrary.simpleMessage("لا توجد منتجات"),
     "no_training_plan_yet": MessageLookupByLibrary.simpleMessage(
       "لم تقم بإنشاء خطة تدريب شخصية بعد. استخدم المدرب الذكي للبدء.",
@@ -287,6 +317,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "optimal_recovery_zone": MessageLookupByLibrary.simpleMessage(
       "منطقة التعافي المثالية",
     ),
+    "orders": MessageLookupByLibrary.simpleMessage("الطلبات"),
     "overview": MessageLookupByLibrary.simpleMessage("نظرة عامة"),
     "paleo": MessageLookupByLibrary.simpleMessage("باليو"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
@@ -296,19 +327,27 @@ class MessageLookup extends MessageLookupByLibrary {
     "phone_optional": MessageLookupByLibrary.simpleMessage(
       "رقم الهاتف (اختياري)",
     ),
+    "plan": MessageLookupByLibrary.simpleMessage("الخطة"),
     "plan_name": MessageLookupByLibrary.simpleMessage("اسم الخطة"),
     "plan_ready": MessageLookupByLibrary.simpleMessage("الخطة جاهزة!"),
     "plan_ready_message": MessageLookupByLibrary.simpleMessage(
       "لدينا كل ما نحتاجه لإنشاء خطة التدريب والتغذية المخصصة لك.",
     ),
+    "plans": MessageLookupByLibrary.simpleMessage("الخطط"),
     "popular_food": MessageLookupByLibrary.simpleMessage("أطعمة شائعة"),
+    "preview": MessageLookupByLibrary.simpleMessage("معاينة"),
     "previous": MessageLookupByLibrary.simpleMessage("السابق"),
     "price": MessageLookupByLibrary.simpleMessage("السعر"),
     "private_notes": MessageLookupByLibrary.simpleMessage("ملاحظات خاصة"),
     "pro_member": MessageLookupByLibrary.simpleMessage("عضو مميز"),
+    "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
     "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
+    "promo_codes": MessageLookupByLibrary.simpleMessage("أكواد الخصم"),
     "protein": MessageLookupByLibrary.simpleMessage("البروتين"),
     "protein_grams": MessageLookupByLibrary.simpleMessage("البروتين (جم)"),
+    "push_notifications": MessageLookupByLibrary.simpleMessage(
+      "الإشعارات الفورية",
+    ),
     "real_coach": MessageLookupByLibrary.simpleMessage("مدرب حقيقي"),
     "recent_checkins": MessageLookupByLibrary.simpleMessage(
       "التسجيلات الأخيرة",
@@ -329,6 +368,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "review_details_before_accepting": MessageLookupByLibrary.simpleMessage(
       "راجع التفاصيل قبل القبول.",
     ),
+    "role": MessageLookupByLibrary.simpleMessage("الدور"),
     "save_changes": MessageLookupByLibrary.simpleMessage("حفظ التغييرات"),
     "save_comments": MessageLookupByLibrary.simpleMessage("حفظ التعليقات"),
     "save_meal_plan": MessageLookupByLibrary.simpleMessage("حفظ خطة الوجبات"),
@@ -339,7 +379,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "الجدول والتدريب",
     ),
     "schedule_session": MessageLookupByLibrary.simpleMessage("جدولة جلسة"),
+    "search_by_name": MessageLookupByLibrary.simpleMessage("البحث بالاسم"),
     "search_products": MessageLookupByLibrary.simpleMessage("ابحث عن المنتجات"),
+    "security": MessageLookupByLibrary.simpleMessage("الأمان"),
     "select_a_pro_to_build_workout": MessageLookupByLibrary.simpleMessage(
       "اختر محترفًا لبناء خطة التمرين الخاصة بك",
     ),
@@ -355,6 +397,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "كم من الوقت لديك في كل جلسة؟",
     ),
     "session_type": MessageLookupByLibrary.simpleMessage("نوع الجلسة"),
+    "sessions": MessageLookupByLibrary.simpleMessage("الجلسات"),
     "set_calorie_macro_targets": MessageLookupByLibrary.simpleMessage(
       "تحديد أهداف السعرات والماكروز.",
     ),
@@ -369,9 +412,11 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "sleep_log": MessageLookupByLibrary.simpleMessage("تسجيل النوم"),
     "snack": MessageLookupByLibrary.simpleMessage("سناك"),
+    "staff": MessageLookupByLibrary.simpleMessage("الموظفون"),
     "standard": MessageLookupByLibrary.simpleMessage("قياسي"),
     "start_shopping": MessageLookupByLibrary.simpleMessage("ابدأ التسوق"),
     "start_workout": MessageLookupByLibrary.simpleMessage("ابدأ التمرين"),
+    "status": MessageLookupByLibrary.simpleMessage("الحالة"),
     "step": MessageLookupByLibrary.simpleMessage("خطوة"),
     "step_1_basics": MessageLookupByLibrary.simpleMessage(
       "الخطوة 1: الأساسيات",
@@ -391,6 +436,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "time": MessageLookupByLibrary.simpleMessage("الوقت"),
     "todays_sessions": MessageLookupByLibrary.simpleMessage("جلسات اليوم"),
     "todays_workout": MessageLookupByLibrary.simpleMessage("تمرين اليوم"),
+    "top_products": MessageLookupByLibrary.simpleMessage(
+      "أكثر المنتجات مبيعًا",
+    ),
     "total": MessageLookupByLibrary.simpleMessage("الإجمالي"),
     "track_progress": MessageLookupByLibrary.simpleMessage(
       "تابع تقدمك واطّلع على التوقعات بناءً على خطتك.",
@@ -423,6 +471,8 @@ class MessageLookup extends MessageLookupByLibrary {
       "عرض الجدول الكامل",
     ),
     "view_plan": MessageLookupByLibrary.simpleMessage("عرض الخطة"),
+    "view_profile": MessageLookupByLibrary.simpleMessage("عرض الملف الشخصي"),
+    "view_summary": MessageLookupByLibrary.simpleMessage("عرض الملخص"),
     "visit_history": MessageLookupByLibrary.simpleMessage("سجل الزيارات"),
     "waiting_for_coach": MessageLookupByLibrary.simpleMessage(
       "في انتظار مايك منتزر لإنشاء خطتك.",

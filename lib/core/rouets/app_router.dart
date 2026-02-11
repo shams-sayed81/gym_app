@@ -35,7 +35,7 @@ abstract class AppRouter {
     _router = GoRouter(
       navigatorKey: navigatorKey,
 
-      initialLocation:CoachBottomNavBarView.routeName,
+      initialLocation:AdminView.routeName,
       routes: RoutesList.all,
     );
 

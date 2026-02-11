@@ -83,7 +83,7 @@ class _MembersBodyState extends State<MembersBody> {
           onChanged: (v) => setState(() => search = v),
           style: const TextStyle(color: Colors.white),
           decoration: InputDecoration(
-            hintText: 'Search by name',
+            hintText: ' ',
             hintStyle: const TextStyle(color: Colors.white38),
             prefixIcon: const Icon(Icons.search, color: Colors.white38),
             filled: true,

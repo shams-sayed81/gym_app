@@ -4,6 +4,7 @@ import 'package:gym_app/core/theme/app_colors.dart';
 import 'package:gym_app/core/theme/app_text_styles.dart';
 import 'package:gym_app/core/widgets/custom_tab_bar.dart';
 import 'package:gym_app/features/coach/home/ui/widgets/overview_tab_bar_view.dart';
+import 'package:gym_app/features/coach/home/ui/widgets/nutrition_tab_bar_view.dart';
 import 'package:gym_app/features/coach/home/ui/widgets/training_tab_bar_view.dart';
 
 import '../../../../../core/helpers/app_decoration.dart';
@@ -99,8 +100,8 @@ class MemberProfileScreen extends StatelessWidget {
               child: TabBarView(
                 children: [
                   OverviewTabBarView(member: member),
-                  OverviewTabBarView(member: member),
-                  TrainingTabBarView(),
+                  TrainingTabBarViewScreen(),
+                  NutritionTabBarView(),
                   InBodyTabBarView(),
                   DirectChatScreen(member: member,),
                 ],

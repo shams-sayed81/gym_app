@@ -7,6 +7,7 @@ import 'package:gym_app/core/theme/app_colors.dart';
 import 'package:gym_app/core/theme/app_text_styles.dart';
 
 import '../../../../core/widgets/column_chart.dart';
+import '../../../../generated/l10n.dart';
 import '../../../member/home/ui/widgets/line_chart.dart';
 
 class AdminViewBody extends StatelessWidget {
@@ -14,6 +15,7 @@ class AdminViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s=S.of(context);
     return SingleChildScrollView(
       padding: const EdgeInsets.symmetric(vertical: 16),
       child: Column(
@@ -43,7 +45,7 @@ class AdminViewBody extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children:  [
                 Text(
-                  'Quick Actions',
+                  s.actions,
                   style: AppTextStyles.font16WhiteBold,
                 ),
                 vGap(10),
@@ -121,6 +123,7 @@ class _StatCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s=S.of(context);
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
@@ -135,7 +138,7 @@ class _StatCard extends StatelessWidget {
             style: AppTextStyles.font16WhiteBold.copyWith(color: color),
           ),
           vGap(5),
-          Text('Total Members', style: AppTextStyles.font14GreyRegular),
+          Text(s.total, style: AppTextStyles.font14GreyRegular),
           vGap(5),
           Text(
             '+12 this week',
@@ -152,6 +155,8 @@ class _QuickActionsGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s=S.of(context);
+
     return GridView.count(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
@@ -161,7 +166,7 @@ class _QuickActionsGrid extends StatelessWidget {
       childAspectRatio: 1.5,
       children: [
         _QuickAction(
-          title: 'Add Member',
+          title: s.add_staff,
           icon: Icons.person_add,
           color: Colors.blueAccent,
         ),
